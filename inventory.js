@@ -1,7 +1,7 @@
-// Load items from local storage or initialize empty array
+
 let inventory = JSON.parse(localStorage.getItem("inventory")) || [];
 
-// Display all items
+
 function displayInventory() {
     const itemList = document.getElementById("itemList");
     itemList.innerHTML = "";
@@ -14,7 +14,7 @@ function displayInventory() {
     });
 }
 
-// Add new item to inventory
+
 function addItem() {
     const name = prompt("Item Name:");
     const price = parseFloat(prompt("Item Price:"));
@@ -52,7 +52,7 @@ function sellItem(index) {
     recordSale(saleAmount); // Update sales
 }
 
-// Edit item
+
 function editItem(index) {
     const item = inventory[index];
     const name = prompt("New Name:", item.name);
@@ -68,14 +68,13 @@ function editItem(index) {
     }
 }
 
-// Delete item
+
 function deleteItem(index) {
     inventory.splice(index, 1);
     localStorage.setItem("inventory", JSON.stringify(inventory));
     displayInventory();
 }
 
-// Initialize inventory display
 displayInventory();
 
 function sellItem(index) {
@@ -104,7 +103,6 @@ function sellItem(index) {
     displayInventory();
     recordSale(saleAmount); // Update sales
 
-    // Generate receipt
     generateReceipt(customerName, [{ name: item.name, price: item.price, quantity }], saleAmount);
 }
 
