@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button onclick="logout()">Logout</button>
+    <h2>Available Items</h2>
+    <table id="shopItems">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <h3>Shopping Cart</h3>
+    <table id="cartItems">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p>Total: $<span id="cartTotal">0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+    <button onclick="generateInvoice()">Generate Invoice</button>
+
+
+    <h3>Daily Sales</h3>
+    <p>Total Sales Today: $<span id="dailySales">0.00</span></p>
+
+    <script src="shop.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div class="inventory">
+        <button onclick="logout()">Logout</button>
+        <h2>Inventory Management</h2>
+        <div id="inventory">
+            <button onclick="addItem()">Add New Item</button>
+            <ul id="itemList"></ul>
+        </div>
+
+        <div id="receipt" style="display:none; border:1px solid #ddd; padding:20px; margin-top:20px;">
+            <h3>Receipt Invoice</h3>
+            <p>Customer Name: <span id="customerName"></span></p>
+            <p>Purchase Date: <span id="purchaseDate"></span></p>
+            <ul id="purchasedItems"></ul>
+            <p>Total Amount: $<span id="totalAmount"></span></p>
+            <button onclick="printReceipt()">Print Receipt</button>
+        </div>
+        
+
+        <h3>Sales Reports</h3>
+        <p>Daily Sales Total: $<span id="dailySalesTotal">0.00</span></p>
+        <p>Monthly Sales Total: $<span id="monthlySalesTotal">0.00</span></p>
+    </div>
+    <script src="sales.js"></script>
+    <script src="inventory.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
